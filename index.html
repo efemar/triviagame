@@ -14,9 +14,14 @@
 
 <body>
 
-    <h1> Welcome to World's Friendliest Trivia Game!!</h1>
+    <div id=main>
 
-    <div id="main-container">
+            <h1> Find out if you are REALLY a Friend's Fan!!</h1>
+            <button id="start" name="answer" value="start"> START</button>
+        </div>
+    
+
+    <div id="quiz-container">
         <form id="quiz"></form>
 
         <p>Which actress played Amy, Rachel's sister?</p>
@@ -27,13 +32,13 @@
         <br>
 
         <p>What was Ross' first wife's name?</p>
-        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Susan
-        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Emily
-        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Carol
-        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Rachel
+        <input type="radio" id="mc" name="question2" value="Susan"> Susan
+        <input type="radio" id="mc" name="question2" value="Emily"> Emily
+        <input type="radio" id="mc" name="question2" value="Carol"> Carol
+        <input type="radio" id="mc" name="question2" value="Rachel"> Rachel
         <br>
 
-        <p>Who pees on mMnica's leg after she gets stung by a jellyfish?</p>
+        <p>Who pees on Monica's leg after she gets stung by a jellyfish?</p>
         <input type="radio" id="mc" name="question3" value="Phoebe"> Phoebe
         <input type="radio" id="mc" name="question3" value="Rachel"> Rachel
         <input type="radio" id="mc" name="question3" value="Chandler"> Chandler
@@ -42,7 +47,7 @@
 
         <p>What was Chandler's job in he early seasons of the show?</p>
         <input type="radio" id="mc" name="question4" value="Data Analyst"> Data Analyst
-        <input type="radio" id="mc" name="question4" value="CIT procurements manager"> IT Procurements Manager
+        <input type="radio" id="mc" name="question4" value="IT Procurements Manager"> IT Procurements Manager
         <input type="radio" id="mc" name="question4" value="Marketing Manager"> Marketing Manager
         <input type="radio" id="mc" name="question4" value="Anthropologist"> Anthropologist
         <br>
@@ -55,18 +60,22 @@
         <br>
 
         <p>Which apartment number did Monica originally have?</p>
-        <input type="radio" id="mc" name="question5" value="4"> 4
-        <input type="radio" id="mc" name="question5" value="5"> 5
-        <input type="radio" id="mc" name="question5" value="17"> 17
-        <input type="radio" id="mc" name="question5" value="20"> 20
+        <input type="radio" id="mc" name="question6" value="4"> 4
+        <input type="radio" id="mc" name="question6" value="5"> 5
+        <input type="radio" id="mc" name="question6" value="17"> 17
+        <input type="radio" id="mc" name="question6" value="20"> 20
         <br>
 
-        <button id="submit">Submit Answers</button>
+        <button id="button">Submit Answers</button>
+        
+        
         <div id="results">
-            <p>All Done!</p>
-            <p>Correct Asnwers: <span></span></p>
-            <p>Incorrect Answers: <span></span></p>
-            <p>Unaswered: <span></span> </p>
+            <p></p>
+            <p><span id="message"></span></p>
+            <p><span id="cor-ans"></span></p>
+            <p> <span id="inc-ans"></span> </p>
+            <p> <span id="un-ans"></span> </p>
+            <p> <span id="gifs"></span> </p>
         </div>
     </div>
 
