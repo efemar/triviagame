@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,64 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
-    
-    <h1> Welcome to World's of Fun Trivia Game!!</h1>
 
-   <div class="quiz"></div>
-   <div class="submit"></div>
-   <div class="results">
-       <p>All Done!</p>
-       <p>Correct Asnwers: <span></span></p>
-       <p>Incorrect Answers: <span></span></p>
-       <p>Unaswered: <span></span> </p>
-   </div>
+    <h1> Welcome to World's Friendliest Trivia Game!!</h1>
 
+    <div id="main-container">
+        <form id="quiz"></form>
+
+        <p>Which actress played Amy, Rachel's sister?</p>
+        <input type="radio" id="mc" name="question1" value="Christina Applegate"> Christina Applegate
+        <input type="radio" id="mc" name="question1" value="Jennifer Aniston"> Jennifer Aniston
+        <input type="radio" id="mc" name="question1" value="Lisa Kudrow"> Lisa Kudrow
+        <input type="radio" id="mc" name="question1" value="Selma Blair"> Selma Blair
+        <br>
+
+        <p>What was Ross' first wife's name?</p>
+        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Susan
+        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Emily
+        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Carol
+        <input type="radio" id="mc" name="question2" value="Christina Applegate"> Rachel
+        <br>
+
+        <p>Who pees on mMnica's leg after she gets stung by a jellyfish?</p>
+        <input type="radio" id="mc" name="question3" value="Phoebe"> Phoebe
+        <input type="radio" id="mc" name="question3" value="Rachel"> Rachel
+        <input type="radio" id="mc" name="question3" value="Chandler"> Chandler
+        <input type="radio" id="mc" name="question3" value="Joey"> Joey
+        <br>
+
+        <p>What was Chandler's job in he early seasons of the show?</p>
+        <input type="radio" id="mc" name="question4" value="Data Analyst"> Data Analyst
+        <input type="radio" id="mc" name="question4" value="CIT procurements manager"> IT Procurements Manager
+        <input type="radio" id="mc" name="question4" value="Marketing Manager"> Marketing Manager
+        <input type="radio" id="mc" name="question4" value="Anthropologist"> Anthropologist
+        <br>
+
+        <p>What was the name for Joey's stuffed animal?</p>
+        <input type="radio" id="mc" name="question5" value="Marcel"> Marcel
+        <input type="radio" id="mc" name="question5" value="Alisha May"> Alisha May
+        <input type="radio" id="mc" name="question5" value="Hugsy"> Hugsy
+        <input type="radio" id="mc" name="question5" value="Muriel"> Muriel
+        <br>
+
+        <p>Which apartment number did Monica originally have?</p>
+        <input type="radio" id="mc" name="question5" value="4"> 4
+        <input type="radio" id="mc" name="question5" value="5"> 5
+        <input type="radio" id="mc" name="question5" value="17"> 17
+        <input type="radio" id="mc" name="question5" value="20"> 20
+        <br>
+
+        <button id="submit">Submit Answers</button>
+        <div id="results">
+            <p>All Done!</p>
+            <p>Correct Asnwers: <span></span></p>
+            <p>Incorrect Answers: <span></span></p>
+            <p>Unaswered: <span></span> </p>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -31,4 +77,5 @@
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
+
 </html>
