@@ -165,7 +165,7 @@ $(document).ready(function () {
          }
 
 
-        var messages = ["I might have to unfriend you!!", "Alright..You can do a little better", "Holy Moly!! You are basically part of the Friends' Gang!"]
+        var messages = ["I might have to unfriend you!!", "Alright..You can do a little better!!", "Holy Moly!! You are basically part of the Friends' Gang!"]
 
         var gifs = ["https://media.giphy.com/media/Js1ur5v1vmaj4mRxyq/giphy.gif", "https://media.giphy.com/media/eJS4WUQ7MkNKx3qxPN/giphy.gif", "https://media.giphy.com/media/YnBntKOgnUSBkV7bQH/giphy.gif"]
 
