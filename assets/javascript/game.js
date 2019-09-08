@@ -1,108 +1,176 @@
 
-//Start Button that starts the time countdown
-
-// Need to create a form input for each question
-
-//Need to provide asnwers for each question
-
-
-//Pick gifs or images for getting everything correct
-// Happy: https://media.giphy.com/media/YnBntKOgnUSBkV7bQH/giphy.gif
-// Average: https://media.giphy.com/media/eJS4WUQ7MkNKx3qxPN/giphy.gif
-// Bad: https://media.giphy.com/media/Js1ur5v1vmaj4mRxyq/giphy.gif
-
-
-
-
 $(document).ready(function () {
 
 
-    $("#start").on("click", function() {
-        
+    var correctAns = 0;
+    var incorrectAns = 0;
+    var unAns = 0;
+    var timer;
+    var counter = 45
+
+
+    clearInterval(timer);
+
+    function timeUp() {
+        clearInterval(timer);
+        results();
+    }
+
+    function countDown() {
+        counter--;
+
+        $("#timer").text("Time remaining: " + counter + " seconds");
+
+        if (counter === 0) {
+            timeUp();
+        }
+    }
+
+
+    function startGame() {
         // Show #quiz-container
         $("#quiz-container").removeClass('hidden');
 
-    
-        //Start the timer
-
-       
+        //Remove the start-div
+        $('#start-div').addClass('hidden');
 
 
+        //wait 30 seconds to run the results function
+        timer = setInterval(countDown, 1000);
+
+        countDown();
+
+    }
+
+
+
+
+    //Load questions
+    $("#start").on("click", function () {
+
+        // Show #quiz-container
+        $("#quiz-container").removeClass('hidden');
+
+        //Remove the start-div
+        $('#start-div').addClass('hidden');
+
+
+        //wait 30 seconds to run the results function
+        timer = setInterval(countDown, 1000);
+
+        countDown();
     })
-    
-
-    $(".question1").change(function () {
-        $('.question1').not(this).prop('checked', false);
-     });
-
-     $(".question2").change(function () {
-        $('.question2').not(this).prop('checked', false);
-     });
-
-     $(".question3").change(function () {
-        $('.question3').not(this).prop('checked', false);
-     });
-
-     $(".question4").change(function () {
-        $('.question4').not(this).prop('checked', false);
-     });
-
-     $(".question5").change(function () {
-        $('.question5').not(this).prop('checked', false);
-     });
-
-     $(".question6").change(function () {
-        $('.question6').not(this).prop('checked', false);
-     });
 
 
-    $("#results").on("click", function () {
 
-        //creating variables to store each question's answers
-        
-        
-        var question1 = $("input#mc.question1").val();
-       
-        var question2 = $("input#mc.question2").val();
-        
-        var question3 = $("input#mc.question3").val();
-        
-        var question4 = $("input#mc.question4").val();
-        
-        var question5 = $("input#mc.question5").val();
-        
-        var question6 = $("input#mc.question6").val();
-       
-        console.log(question1,question2, question3, question4, question5, question6);
+    //Function to run results
 
-        var correctAns = 0
-        var incorrectAns = 6 - correctAns;
-        var unAns = 6 - correctAns - incorrectAns;
+    function results() {
 
+
+        var question1 = $("input[name='question1']:checked").val()
+        var question2 = $("input[name='question2']:checked").val()
+        var question3 = $("input[name='question3']:checked").val()
+        var question4 = $("input[name='question4']:checked").val()
+        var question5 = $("input[name='question5']:checked").val()
+        var question6 = $("input[name='question6']:checked").val()
+
+
+        //Question 1
         if (question1 === "Christina Applegate") {
             correctAns++;
         }
-        if (question2 === "Carol") {
+
+        else if (question1 == undefined ) {
+             unAns++;
+           }
+
+         else {
+           incorrectAns++;
+          }
+
+
+
+        //Question 2
+        if ( question2 === "Carol") {
             correctAns++;
-        }
-        if (question3 === "Chandler") {
-            correctAns++;
-        }
-        if (question4 === "IT Procurements Manager") {
-            correctAns++;
-        }
-        if (question5 === "Hugsy") {
-            correctAns++
-        }
-        if (question6 === "5") {
-            correctAns++
+         }
+
+        else if (question2 == undefined) {
+            unAns++;
         }
 
-        var messages = ["I might have to unfriend you!!", "Alright..You can do a little better", "Holy Moly!! You are basically part of the Friends Gang!"]
+         else {
+          incorrectAns++;
+
+         }
+
+        //Question 3
+
+         if ( question3 === "Chandler" ) {
+            correctAns++;
+        }
+
+        else if (question3 == undefined) {
+            unAns++;
+        }
+
+         else {
+             incorrectAns++;
+
+         }
+
+        //Question 4
+         if ( question4 === "IT Procurements Manager") {
+            correctAns++;
+         }
+
+        else if (question4 == undefined) {
+            unAns++;
+        }
+
+         else {
+            incorrectAns++;
+
+         }
+
+
+        //Question 5
+         if (question5 === "Hugsy") {
+             correctAns++;
+         }
+
+        else if (question5 == undefined) {
+            unAns++;
+        }
+
+         else {
+             incorrectAns++;
+
+         }
+
+
+        //Question 6
+         if ( question6 === "5") {
+             correctAns++;
+         }
+
+        else if (question6 == undefined) {
+            unAns++;
+        }
+
+        else {
+             incorrectAns++;
+
+         }
+
+
+        var messages = ["I might have to unfriend you!!", "Alright..You can do a little better", "Holy Moly!! You are basically part of the Friends' Gang!"]
 
         var gifs = ["https://media.giphy.com/media/Js1ur5v1vmaj4mRxyq/giphy.gif", "https://media.giphy.com/media/eJS4WUQ7MkNKx3qxPN/giphy.gif", "https://media.giphy.com/media/YnBntKOgnUSBkV7bQH/giphy.gif"]
 
         var score;
+        
         if (correctAns <= 1) {
             score = 0;
         }
@@ -113,29 +181,46 @@ $(document).ready(function () {
             score = 2;
         }
 
+    
 
         $('#quiz-container').addClass('hidden');
+        $('#results-container').removeClass('hidden');
         $("#message").text(messages[score]);
-        $("#cor-ans").text("Correct: " + correctAns);
-        $("#inc-ans").text("Incorrect: " + incorrectAns);
-        $("#un-ans").text("Unaswered: " + unAns);
-        $("#gifs").html("<img src="+gifs[score]+">")
+        $("#cor-ans").text("Correct Answers: " + correctAns);
+        $("#inc-ans").text("Incorrect Answers: " + incorrectAns);
+        $("#un-ans").text("Unanswered: " + unAns);
+        $('#try-again').removeClass('hidden');
+        $("#gifs").html("<img src=" + gifs[score] + ">")
+
+        console.log(question1)
+        clearInterval(timer);
+    }
+
+
+
+    $("#results").on("click", function () {
+
+        results();
+
+
     })
 
+    $("#try-again").on("click", function () {
+        clearInterval(timer);
+        $('#results-container').addClass('hidden');
+        counter = 45;
+        correctAns = 0;
+        unAns = 0;
+        incorrectAns = 0;
+        question1 = "";
+        question2 = "";
+        question3 = "";
+        question4 = "";
+        question5 = "";
+        question6 = "";
+        timer;
+        startGame();
 
+    })
 
-
-
-
-}
-)
-//TODO LIST
-
-//Create a function that resets the game
-
-
-
-
-
-
-
+})

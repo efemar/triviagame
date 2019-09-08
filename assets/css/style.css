@@ -1,0 +1,93 @@
+.hidden {
+    display: none;
+}
+
+
+#timer {
+    font-family: monospace;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    background: url("../images/Friends-TV-show-on-NBC-canceled-no-season-11.jpg");
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#start-div {
+    padding:100x;
+    margin: 130px;
+    margin-top:150px;
+    text-align: center;
+    background-color: white;
+}
+
+h1 {
+    padding-top: 20px;
+    margin-bottom:30px;
+    font-size: 40px;
+}
+
+#start, #results, #try-again {
+    padding: 12px 28px;
+}
+
+button {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+#quiz-container {
+    padding:100x;
+    margin: 130px;
+    margin-top:150px;
+    text-align: center;
+    background-color: white;
+}
+
+p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+input {
+    text-align:center;
+    padding-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#results-container {
+    padding:100x;
+    margin: 130px;
+    margin-top:150px;
+    text-align: center;
+    background-color: white;
+}
+
+#results-container p:first-child {
+    margin: 10px;
+    padding-top:10px;
+    font-size: 20px;
+}
+
+#results-container p {
+    margin: 10px;
+    padding-top:10px;
+    font-size: 20px;
+}
+#results-container button {
+    padding: auto;
+}
+
+
+#message {
+    padding-top: 20px;
+    font-size: 30px;
+}
+

@@ -14,9 +14,10 @@
 
 <body>
 
-    <div id=main>
+   
 
-            <h1> Find out if you are REALLY a Friend's Fan!!</h1>
+        <div id=start-div>
+            <h1> Find out if you REALLY are a Friend's Fan!!</h1>
             <button type="submit" id="start" name="answer" value="start"> START</button>
         </div>
     
@@ -28,62 +29,62 @@
         <form id="quiz"></form>
 
         <p>Which actress played Amy, Rachel's sister?</p>
-        <input type="radio" id="mc" class="question1" value="Christina Applegate"> Christina Applegate
-        <input type="radio" id="mc" class="question1" value="Jennifer Aniston"> Jennifer Aniston
-        <input type="radio" id="mc" class="question1" value="Lisa Kudrow"> Lisa Kudrow
-        <input type="radio" id="mc" class="question1" value="Selma Blair"> Selma Blair
+        <input type="radio" name="question1" value="Christina Applegate"> Christina Applegate
+        <input type="radio" name="question1" value="Jennifer Aniston"> Jennifer Aniston
+        <input type="radio" name="question1" value="Lisa Kudrow"> Lisa Kudrow
+        <input type="radio" name="question1" value="Selma Blair"> Selma Blair
         <br>
 
         <p>What was Ross' first wife's name?</p>
-        <input type="radio" id="mc" class="question2" value="Susan"> Susan
-        <input type="radio" id="mc" class="question2" value="Emily"> Emily
-        <input type="radio" id="mc" class="question2" value="Carol"> Carol
-        <input type="radio" id="mc" class="question2" value="Rachel"> Rachel
+        <input type="radio" name="question2" value="Susan"> Susan
+        <input type="radio" name="question2" value="Emily"> Emily
+        <input type="radio" name="question2" value="Carol"> Carol
+        <input type="radio" name="question2" value="Rachel"> Rachel
         <br>
 
         <p>Who pees on Monica's leg after she gets stung by a jellyfish?</p>
-        <input type="radio" id="mc" class="question3" value="Phoebe"> Phoebe
-        <input type="radio" id="mc" class="question3" value="Rachel"> Rachel
-        <input type="radio" id="mc" class="question3" value="Chandler"> Chandler
-        <input type="radio" id="mc" class="question3" value="Joey"> Joey
+        <input type="radio" name="question3" value="Phoebe"> Phoebe
+        <input type="radio" name="question3" value="Rachel"> Rachel
+        <input type="radio" name="question3" value="Chandler"> Chandler
+        <input type="radio" name="question3" value="Joey"> Joey
         <br>
 
-        <p>What was Chandler's job in he early seasons of the show?</p>
-        <input type="radio" id="mc" class="question4" value="Data Analyst"> Data Analyst
-        <input type="radio" id="mc" class="question4" value="IT Procurements Manager"> IT Procurements Manager
-        <input type="radio" id="mc" class="question4" value="Marketing Manager"> Marketing Manager
-        <input type="radio" id="mc" class="question4" value="Anthropologist"> Anthropologist
+        <p>What was Chandler's job in the early seasons of the show?</p>
+        <input type="radio" name="question4" value="Data Analyst"> Data Analyst
+        <input type="radio" name="question4" value="IT Procurements Manager"> IT Procurements Manager
+        <input type="radio" name="question4" value="Marketing Manager"> Marketing Manager
+        <input type="radio" name="question4" value="Anthropologist"> Anthropologist
         <br>
 
-        <p>What was the name for Joey's stuffed animal?</p>
-        <input type="radio" id="mc" class="question5" value="Marcel"> Marcel
-        <input type="radio" id="mc" class="question5" value="Alisha May"> Alisha May
-        <input type="radio" id="mc" class="question5" value="Hugsy"> Hugsy
-        <input type="radio" id="mc" class="question5" value="Muriel"> Muriel
+        <p>What was the name of Joey's stuffed animal?</p>
+        <input type="radio" name="question5" value="Marcel"> Marcel
+        <input type="radio" name="question5" value="Alisha May"> Alisha May
+        <input type="radio" name="question5" value="Hugsy"> Hugsy
+        <input type="radio" name="question5" value="Muriel"> Muriel
         <br>
 
         <p>Which apartment number did Monica originally have?</p>
-        <input type="radio" id="mc" class="question6" value="4"> 4
-        <input type="radio" id="mc" class="question6" value="5"> 5
-        <input type="radio" id="mc" class="question6" value="17"> 17
-        <input type="radio" id="mc" class="question6" value="20"> 20
+        <input type="radio" name="question6" value="4"> 4
+        <input type="radio" name="question6" value="5"> 5
+        <input type="radio" name="question6" value="17"> 17
+        <input type="radio" name="question6" value="20"> 20
         <br>
 
         <button type="submit" id="results" value="done">Submit Answers</button>
         
     </div>
 
-        <div id="results-container">
-            <p></p>
+        <div id="results-container" class="hidden">
             <p><span id="message"></span></p>
             <p><span id="cor-ans"></span></p>
             <p> <span id="inc-ans"></span> </p>
             <p> <span id="un-ans"></span> </p>
             <p> <span id="gifs"></span> </p>
+            <button type="submit" id="try-again" class="hidden" value="try-again"> TRY AGAIN</button>
         </div>
     
-
-    <!-- jQuery -->
+   
+        <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Script -->
